@@ -30,16 +30,19 @@ const { title, description = "Boys Middle School - Empowering young men through 
 	}
 
 	:root {
-		--color-primary: #1a365d;
-		--color-primary-light: #2c5282;
-		--color-accent: #3182ce;
-		--color-text: #1a202c;
-		--color-text-light: #4a5568;
-		--color-bg: #ffffff;
-		--color-bg-light: #f7fafc;
-		--color-border: #e2e8f0;
+		--color-primary: #131314;
+		--color-primary-light: #2a2a2c;
+		--color-accent: #d97757;
+		--color-accent-hover: #c25d3f;
+		--color-text: #faf9f0;
+		--color-text-dark: #1a1a1b;
+		--color-text-muted: #a8a8a8;
+		--color-bg: #0a0a0b;
+		--color-bg-light: #1a1a1c;
+		--color-bg-elevated: #252527;
+		--color-border: #2a2a2c;
 		--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-		--font-serif: Georgia, 'Times New Roman', serif;
+		--font-serif: 'Georgia', 'Times New Roman', serif;
 	}
 
 	html {
@@ -50,13 +53,17 @@ const { title, description = "Boys Middle School - Empowering young men through 
 	body {
 		color: var(--color-text);
 		background: var(--color-bg);
-		line-height: 1.6;
+		line-height: 1.7;
+		font-weight: 400;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-weight: 700;
+		font-weight: 600;
 		line-height: 1.2;
-		color: var(--color-primary);
+		color: var(--color-text);
+		letter-spacing: -0.02em;
 	}
 
 	h1 {
@@ -74,11 +81,11 @@ const { title, description = "Boys Middle School - Empowering young men through 
 	a {
 		color: var(--color-accent);
 		text-decoration: none;
-		transition: color 0.2s ease;
+		transition: all 0.3s ease;
 	}
 
 	a:hover {
-		color: var(--color-primary);
+		color: var(--color-accent-hover);
 	}
 
 	@media (max-width: 768px) {

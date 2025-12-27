@@ -9,8 +9,8 @@ import Footer from '../components/Footer.astro';
 	<main>
 		<section class="page-header">
 			<div class="container">
-				<h1>Express Your Interest</h1>
-				<p class="page-subtitle">Fill out this form and we will get back to you</p>
+				<h1>Interested?</h1>
+				<p class="page-subtitle">Please fill out the form.</p>
 			</div>
 		</section>
 
@@ -37,20 +37,21 @@ import Footer from '../components/Footer.astro';
 
 <style>
 	.page-header {
-		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-		color: white;
+		background: var(--color-bg-elevated);
+		border-bottom: 1px solid var(--color-border);
+		color: var(--color-text);
 		padding: 4rem 2rem;
 		text-align: center;
 	}
 
 	.page-header h1 {
-		color: white;
+		color: var(--color-text);
 		margin-bottom: 1rem;
 	}
 
 	.page-subtitle {
 		font-size: 1.125rem;
-		opacity: 0.95;
+		color: var(--color-text-muted);
 	}
 
 	.container {
@@ -61,13 +62,13 @@ import Footer from '../components/Footer.astro';
 
 	.interest-form {
 		padding: 5rem 0;
-		background: var(--color-bg-light);
+		background: var(--color-bg);
 	}
 
 	.form-container {
-		background: white;
+		background: var(--color-bg-elevated);
 		border-radius: 12px;
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+		border: 1px solid var(--color-border);
 		padding: 2rem;
 		display: flex;
 		justify-content: center;
