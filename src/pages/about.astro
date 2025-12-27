@@ -1,0 +1,264 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Founders | Boys Middle School">
+	<Header />
+	<main>
+		<section class="page-header">
+			<div class="container">
+				<h1>Founders</h1>
+				<p class="page-subtitle">Nishant Deshpande and Nina Bhanap (parents to their three boys who grew up in the SF Bay Area)</p>
+			</div>
+		</section>
+
+		<section class="founders">
+			<div class="container">
+				<div class="founders-grid">
+					<div class="founder-card">
+						<div class="founder-image">
+							<div class="founder-placeholder">
+								<span class="initials">ND</span>
+							</div>
+						</div>
+						<div class="founder-info">
+							<h3>Nishant Deshpande</h3>
+							<p class="founder-subtitle">(aka the dad)</p>
+							<a href="https://www.linkedin.com/in/nishant-deshpande-7310542/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn Profile</a>
+							<div class="founder-bio">
+								<p>I'm the father of 3 boys (now in college). My kids attended several different schools, mostly public, and private.</p>
+								<p>I think the education system is one of the biggest problems in the US today.</p>
+								<p>Mahatma Gandhi said "Be the change you want to see in the world".</p>
+								<p>This is my effort.</p>
+								<p><strong>If you feel the same, you're welcome to join me.</strong></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="founder-card">
+						<div class="founder-image">
+							<div class="founder-placeholder">
+								<span class="initials">NB</span>
+							</div>
+						</div>
+						<div class="founder-info">
+							<h3>Nina Bhanap</h3>
+							<p class="founder-subtitle">(aka the mom)</p>
+							<a href="https://www.linkedin.com/in/nina-bhanap-a298a/" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn Profile</a>
+							<div class="founder-bio">
+								<p>I grew up moving from place to place as my Dad built power and desalination plants around the world. Because of that, I changed schools constantly—home schooling, day schools, boarding school—and somehow I genuinely loved all of it. School was always awesome!</p>
+								<p>My boys didn't get that, especially in middle school. They had a great group of friends, but the learning part just didn't spark anything. I always felt like something was missing, and that these years could—and should—be glorious and not a passing of time.</p>
+								<p>That's why I want to help build this school. I want little boys to feel excited, to learn amazing things, and to actually have fun at school. This age is meant to be full of wonder and energy, and both sides of the brain should be firing.</p>
+								<p><strong>I'm committing to making that happen, at our school.</strong></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-section">
+			<div class="container">
+				<div class="cta-content">
+					<h2>Interested?</h2>
+					<p>Please fill out our short form and we will get back to you.</p>
+					<a href="/interest" class="btn btn-primary btn-large">Express Your Interest</a>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page-header {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+		color: white;
+		padding: 4rem 2rem;
+		text-align: center;
+	}
+
+	.page-header h1 {
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.125rem;
+		opacity: 0.95;
+		line-height: 1.6;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.founders {
+		padding: 5rem 0;
+		background: var(--color-bg-light);
+	}
+
+	.founders-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		gap: 3rem;
+	}
+
+	.founder-card {
+		background: white;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+
+	.founder-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+	}
+
+	.founder-image {
+		width: 100%;
+		height: 250px;
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.founder-placeholder {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		backdrop-filter: blur(10px);
+	}
+
+	.initials {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: white;
+	}
+
+	.founder-info {
+		padding: 2.5rem;
+	}
+
+	.founder-info h3 {
+		margin-bottom: 0.25rem;
+		font-size: 1.75rem;
+	}
+
+	.founder-subtitle {
+		color: var(--color-text-light);
+		font-style: italic;
+		margin-bottom: 1rem;
+		font-size: 1rem;
+	}
+
+	.linkedin-link {
+		display: inline-block;
+		color: var(--color-accent);
+		font-weight: 500;
+		margin-bottom: 1.5rem;
+		transition: color 0.2s ease;
+	}
+
+	.linkedin-link:hover {
+		color: var(--color-primary);
+		text-decoration: underline;
+	}
+
+	.founder-bio p {
+		color: var(--color-text-light);
+		line-height: 1.7;
+		margin-bottom: 1rem;
+	}
+
+	.founder-bio p:last-child {
+		margin-bottom: 0;
+	}
+
+	.cta-section {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+		color: white;
+		padding: 5rem 0;
+		text-align: center;
+	}
+
+	.cta-content h2 {
+		color: white;
+		margin-bottom: 1rem;
+	}
+
+	.cta-content p {
+		font-size: 1.125rem;
+		margin-bottom: 2rem;
+		opacity: 0.95;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.875rem 2rem;
+		border-radius: 8px;
+		font-weight: 600;
+		transition: all 0.2s ease;
+		border: 2px solid transparent;
+		cursor: pointer;
+		text-align: center;
+		background: white;
+		color: var(--color-primary);
+	}
+
+	.btn:hover {
+		background: var(--color-bg-light);
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	.btn-large {
+		padding: 1rem 2.5rem;
+		font-size: 1.125rem;
+	}
+
+	@media (max-width: 768px) {
+		.page-header {
+			padding: 3rem 1.5rem;
+		}
+
+		.page-subtitle {
+			font-size: 1rem;
+		}
+
+		.founders {
+			padding: 3rem 0;
+		}
+
+		.founders-grid {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.founder-info {
+			padding: 2rem;
+		}
+
+		.cta-section {
+			padding: 3rem 0;
+		}
+
+		.container {
+			padding: 0 1rem;
+		}
+	}
+</style>
+
