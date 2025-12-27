@@ -21,11 +21,6 @@ import Footer from '../components/Footer.astro';
 				<div class="intro-content">
 					<p class="intro-text">The Boys Middle School (BMS) is a proposed 5th through 8th grade boys' school in the San Francisco Bay Area.</p>
 					<p class="intro-text">We believe that some boys are not well served by existing coeducational public and private schools. Our mission is to build a school that deliberately embraces boys' natural instincts — channeling their energy, curiosity, and competitiveness into deep learning, mastery, and confidence through achievement.</p>
-					<div class="quick-links">
-						<a href="#why" class="link-arrow">Why a boys' middle school</a>
-						<a href="#model" class="link-arrow">The BMS Model - How BMS is different</a>
-						<a href="/interest" class="btn btn-primary">Express Your Interest</a>
-					</div>
 				</div>
 			</div>
 		</section>
@@ -96,7 +91,7 @@ import Footer from '../components/Footer.astro';
 
 				<div class="model-card">
 					<div class="model-number">2</div>
-					<h3>Mastery, Math, STEM and Humanities</h3>
+					<h3>Mastery-Based Learning</h3>
 
 					<h4>Why Mastery Matters</h4>
 					<p>In most schools, entire classes move at the same pace. This leaves some students behind — and others bored.</p>
@@ -290,7 +285,7 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.intro {
-		padding: 4rem 0;
+		padding: 3rem 0;
 		background: white;
 	}
 
@@ -306,23 +301,8 @@ import Footer from '../components/Footer.astro';
 		margin-bottom: 1.5rem;
 	}
 
-	.quick-links {
-		display: flex;
-		gap: 1.5rem;
-		margin-top: 2.5rem;
-		flex-wrap: wrap;
-		align-items: center;
-	}
-
-	.link-arrow {
-		color: var(--color-accent);
-		font-weight: 500;
-		transition: all 0.2s ease;
-	}
-
-	.link-arrow:hover {
-		color: var(--color-primary);
-		text-decoration: underline;
+	.intro-text:last-child {
+		margin-bottom: 0;
 	}
 
 	.btn {
@@ -353,7 +333,7 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.why-section {
-		padding: 5rem 0;
+		padding: 3rem 0;
 		background: var(--color-bg-light);
 	}
 
@@ -410,7 +390,7 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.model-section {
-		padding: 5rem 0;
+		padding: 3rem 0;
 		background: white;
 	}
 
@@ -534,8 +514,12 @@ import Footer from '../components/Footer.astro';
 	}
 
 	.expectations {
-		padding: 5rem 0;
+		padding: 3rem 0;
 		background: var(--color-bg-light);
+	}
+
+	.expectations .container {
+		max-width: 1400px;
 	}
 
 	.expectations h2 {
@@ -545,7 +529,7 @@ import Footer from '../components/Footer.astro';
 
 	.expectations-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: repeat(4, 1fr);
 		gap: 2rem;
 	}
 
@@ -580,7 +564,7 @@ import Footer from '../components/Footer.astro';
 	.cta-section {
 		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
 		color: white;
-		padding: 5rem 0;
+		padding: 3rem 0;
 		text-align: center;
 	}
 
@@ -610,6 +594,12 @@ import Footer from '../components/Footer.astro';
 		opacity: 1;
 	}
 
+	@media (max-width: 1024px) {
+		.expectations-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
 	@media (max-width: 768px) {
 		.hero {
 			padding: 5rem 1.5rem;
@@ -629,20 +619,15 @@ import Footer from '../components/Footer.astro';
 		}
 
 		.intro {
-			padding: 3rem 0;
+			padding: 2rem 0;
 		}
 
 		.intro-text {
 			font-size: 1rem;
 		}
 
-		.quick-links {
-			flex-direction: column;
-			align-items: flex-start;
-		}
-
 		.why-section, .model-section, .expectations {
-			padding: 3rem 0;
+			padding: 2rem 0;
 		}
 
 		.content-block, .model-card {
@@ -662,8 +647,13 @@ import Footer from '../components/Footer.astro';
 			padding: 1.5rem;
 		}
 
+		.expectations-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
 		.cta-section {
-			padding: 3rem 0;
+			padding: 2rem 0;
 		}
 
 		.container {
