@@ -19,7 +19,6 @@ const currentPath = Astro.url.pathname;
 						</div>
 					</li>
 					<li><a href="/about" class={currentPath === '/about' ? 'active' : ''}>Founders</a></li>
-					<li><a href="/interest" class={currentPath === '/interest' ? 'active' : ''}>Interest</a></li>
 				</ul>
 				<button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
 					<svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -121,14 +120,14 @@ const currentPath = Astro.url.pathname;
 
 	.dropdown-content {
 		position: absolute;
-		top: calc(100% + 1rem);
+		top: 100%;
 		left: 50%;
 		transform: translateX(-50%);
 		background: var(--color-bg-elevated);
 		border: 1px solid var(--color-border);
 		border-radius: 12px;
 		min-width: 240px;
-		padding: 0.5rem;
+		padding: 1rem 0.5rem 0.5rem 0.5rem;
 		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 		opacity: 0;
 		visibility: hidden;
@@ -145,7 +144,6 @@ const currentPath = Astro.url.pathname;
 		opacity: 1;
 		visibility: visible;
 		pointer-events: auto;
-		top: calc(100% + 0.5rem);
 	}
 
 	.dropdown-content a {
@@ -235,8 +233,8 @@ const currentPath = Astro.url.pathname;
 	const themeToggle = document.getElementById('theme-toggle');
 	const html = document.documentElement;
 
-	// Check for saved theme preference or default to 'dark'
-	const currentTheme = localStorage.getItem('theme') || 'dark';
+	// Check for saved theme preference or default to 'light'
+	const currentTheme = localStorage.getItem('theme') || 'light';
 	html.classList.toggle('light', currentTheme === 'light');
 
 	themeToggle?.addEventListener('click', () => {

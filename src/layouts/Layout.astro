@@ -18,7 +18,7 @@ const { title, description = "Boys Middle School - Empowering young men through 
 		<title>{title}</title>
 		<script is:inline>
 			// Prevent flash of unstyled content
-			const theme = localStorage.getItem('theme') || 'dark';
+			const theme = localStorage.getItem('theme') || 'light';
 			if (theme === 'light') {
 				document.documentElement.classList.add('light');
 			}
@@ -71,6 +71,7 @@ const { title, description = "Boys Middle School - Empowering young men through 
 	html {
 		font-family: var(--font-sans);
 		scroll-behavior: smooth;
+		scroll-padding-top: 100px;
 	}
 
 	body {
