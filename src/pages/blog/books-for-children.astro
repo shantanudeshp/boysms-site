@@ -1,0 +1,170 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Books for Children | Boys Middle School" description="A curated list of books that engage young readers, from Roald Dahl to Tolkien.">
+	<Header />
+	<main>
+		<article class="blog-post">
+			<div class="container">
+				<header class="post-header">
+					<a href="/blog" class="back-link">← Back to Blog</a>
+					<h1>Books for Children</h1>
+					<p class="post-meta">December 30, 2025 · Nishant Deshpande</p>
+				</header>
+
+				<div class="post-content">
+					<p>Books are one of my favorite topics. I have goodreads with a small number of books I've read, and I'm always happy to connect to people to get recommendations.</p>
+
+					<p>Of my 3 kids, the first is an avid reader. He read early and often. If he found an interesting book, he would finish it in a day (when he was &lt;10 years old). And if it was especially interesting, he would re-read it multiple times.</p>
+
+					<p>Here is a selection of the books on our bookshelves that he read.</p>
+
+					<h2>Younger kids</h2>
+					<ul>
+						<li>Charlie and the Chocolate Factory — Roald Dahl</li>
+						<li>Matilda — Roald Dahl</li>
+						<li>James and the Giant Peach — Roald Dahl</li>
+						<li>Fantastic Mr Fox — Roald Dahl</li>
+						<li>The BFG — Roald Dahl</li>
+						<li>Esio Trot — Roald Dahl</li>
+						<li>A Series of Unfortunate Events — Lemony Snicket</li>
+						<li>Aesop's Fables — Aesop</li>
+						<li>Summer ball (and many other sports books) - Mike Lupica</li>
+						<li>The kid who only hit homers - Matt Christopher</li>
+						<li>Illustrated Classics
+							<ul>
+								<li>The prince and the pauper (for children) - Mark Twain</li>
+							</ul>
+						</li>
+					</ul>
+
+					<h2>All kids</h2>
+					<ul>
+						<li>Treasure Island — Robert Louis Stevenson</li>
+						<li>Robinson Crusoe — Daniel Defoe</li>
+						<li>The Jungle Book — Rudyard Kipling</li>
+						<li>The Wonderful Wizard of Oz — L. Frank Baum</li>
+						<li>The Wind in the Willows — Kenneth Grahame</li>
+						<li>The Way Things Work — David Macaulay</li>
+						<li>What if - Randall Munroe</li>
+						<li>The thief lord - Cornelia Funke</li>
+					</ul>
+
+					<h2>Fantasy, Myth, Epic, Adventure</h2>
+					<ul>
+						<li>The Hobbit — J. R. R. Tolkien</li>
+						<li>The Lord of the Rings — J. R. R. Tolkien</li>
+						<li>The Chronicles of Narnia — C. S. Lewis</li>
+						<li>The Once and Future King — T. H. White</li>
+						<li>Eragon — Christopher Paolini</li>
+						<li>The Call of the Wild — Jack London</li>
+						<li>White Fang — Jack London</li>
+						<li>The Count of Monte Cristo — Alexandre Dumas (YA-friendly editions)</li>
+						<li>Tales from the Odyssey - Mary Pope Osborne</li>
+						<li>Mahabharata - The Epic (for children)</li>
+					</ul>
+
+					<h2>Some others that are our favorites</h2>
+					<ul>
+						<li>Yes Minister and Yes Prime Minister - by Jonathan Lynn and Antony Jay</li>
+					</ul>
+				</div>
+			</div>
+		</article>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.blog-post {
+		background: var(--color-bg);
+		padding: 3rem 0 5rem;
+	}
+
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.back-link {
+		display: inline-block;
+		color: var(--color-text-muted);
+		font-size: 0.95rem;
+		margin-bottom: 2rem;
+		transition: color 0.3s ease;
+	}
+
+	.back-link:hover {
+		color: var(--color-accent);
+	}
+
+	.post-header {
+		margin-bottom: 3rem;
+	}
+
+	.post-header h1 {
+		color: var(--color-text);
+		margin-bottom: 0.75rem;
+		font-size: 2.5rem;
+	}
+
+	.post-meta {
+		color: var(--color-text-muted);
+		font-size: 0.95rem;
+	}
+
+	.post-content {
+		color: var(--color-text);
+		line-height: 1.8;
+	}
+
+	.post-content p {
+		margin-bottom: 1.5rem;
+		color: var(--color-text-muted);
+	}
+
+	.post-content h2 {
+		color: var(--color-text);
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
+		font-size: 1.75rem;
+	}
+
+	.post-content ul {
+		margin-bottom: 2rem;
+		padding-left: 2rem;
+	}
+
+	.post-content li {
+		margin-bottom: 0.75rem;
+		color: var(--color-text-muted);
+	}
+
+	.post-content ul ul {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.blog-post {
+			padding: 2rem 0 3rem;
+		}
+
+		.container {
+			padding: 0 1.5rem;
+		}
+
+		.post-header h1 {
+			font-size: 2rem;
+		}
+
+		.post-content h2 {
+			font-size: 1.5rem;
+			margin-top: 2rem;
+		}
+	}
+</style>

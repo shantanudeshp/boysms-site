@@ -1,0 +1,170 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// To add a new blog post:
+// 1. Add a new entry to the posts array below
+// 2. Create the blog post file in src/pages/blog/[slug].astro
+// 3. Update public/sitemap.xml with the new blog URL
+
+const posts = [
+	{
+		title: "Books for Children",
+		slug: "books-for-children",
+		date: "December 30, 2025",
+		author: "Nishant Deshpande",
+		preview: "A curated list of books that engage young readers, from Roald Dahl to Tolkien. These are the books that captured my son's imagination and helped him become an avid reader."
+	},
+
+	// Add new posts here - copy the format above:
+	// {
+	// 	title: "Your Post Title",
+	// 	slug: "your-post-slug",
+	// 	date: "Month Day, Year",
+	// 	author: "Author Name",
+	// 	preview: "A short preview of what the post is about..."
+	// },
+];
+---
+
+<Layout title="Blog | Boys Middle School" description="Thoughts on education, boys' development, and building a school that works.">
+	<Header />
+	<main>
+		<section class="blog-page">
+			<div class="container">
+				<header class="page-header">
+					<h1>Blog</h1>
+					<p class="page-subtitle">Thoughts on education, boys' development, and building a school that works.</p>
+				</header>
+
+				<div class="posts-list">
+					{posts.map(post => (
+						<article class="post-card">
+							<a href={`/blog/${post.slug}`} class="post-link">
+								<h2>{post.title}</h2>
+								<p class="post-meta">{post.date} · {post.author}</p>
+								<p class="post-preview">{post.preview}</p>
+								<span class="read-more">Read more →</span>
+							</a>
+						</article>
+					))}
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.blog-page {
+		background: var(--color-bg);
+		padding: 3rem 0 5rem;
+	}
+
+	.container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.page-header {
+		margin-bottom: 4rem;
+	}
+
+	.page-header h1 {
+		color: var(--color-text);
+		margin-bottom: 1rem;
+		font-size: 3rem;
+	}
+
+	.page-subtitle {
+		font-size: 1.125rem;
+		color: var(--color-text-muted);
+		line-height: 1.6;
+	}
+
+	.posts-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.post-card {
+		background: var(--color-bg-elevated);
+		border-radius: 12px;
+		border: 1px solid var(--color-border);
+		border-left: 3px solid var(--color-accent);
+		transition: all 0.3s ease;
+	}
+
+	.post-card:hover {
+		transform: translateX(4px);
+		border-color: var(--color-accent);
+	}
+
+	.post-link {
+		display: block;
+		padding: 2rem;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.post-link h2 {
+		color: var(--color-text);
+		margin-bottom: 0.5rem;
+		font-size: 1.75rem;
+	}
+
+	.post-meta {
+		color: var(--color-text-muted);
+		font-size: 0.9rem;
+		margin-bottom: 1rem;
+	}
+
+	.post-preview {
+		color: var(--color-text-muted);
+		line-height: 1.7;
+		margin-bottom: 1rem;
+	}
+
+	.read-more {
+		color: var(--color-accent);
+		font-weight: 600;
+		font-size: 0.95rem;
+	}
+
+	.post-card:hover .read-more {
+		color: var(--color-accent-hover);
+	}
+
+	@media (max-width: 768px) {
+		.blog-page {
+			padding: 2rem 0 3rem;
+		}
+
+		.container {
+			padding: 0 1.5rem;
+		}
+
+		.page-header {
+			margin-bottom: 3rem;
+		}
+
+		.page-header h1 {
+			font-size: 2rem;
+		}
+
+		.page-subtitle {
+			font-size: 1rem;
+		}
+
+		.post-link {
+			padding: 1.5rem;
+		}
+
+		.post-link h2 {
+			font-size: 1.5rem;
+		}
+	}
+</style>
