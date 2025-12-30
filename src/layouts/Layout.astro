@@ -16,6 +16,16 @@ const { title, description = "Boys Middle School - Empowering young men through 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17827465511"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'AW-17827465511');
+		</script>
+
 		<script is:inline>
 			// Prevent flash of unstyled content
 			const theme = localStorage.getItem('theme') || 'light';

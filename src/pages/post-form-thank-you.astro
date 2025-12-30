@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Thank You | Boys Middle School">
+	<Header />
+	<main>
+		<section class="thank-you-section">
+			<div class="container">
+				<div class="thank-you-content">
+					<h1>Thank you again.</h1>
+					<p>We will be in touch soon.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.thank-you-section {
+		min-height: 70vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: var(--color-bg);
+		padding: 4rem 2rem;
+	}
+
+	.container {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.thank-you-content {
+		text-align: center;
+		background: var(--color-bg-elevated);
+		border-radius: 12px;
+		border: 1px solid var(--color-border);
+		border-left: 3px solid var(--color-accent);
+		padding: 4rem 3rem;
+	}
+
+	.thank-you-content h1 {
+		color: var(--color-text);
+		margin-bottom: 1.5rem;
+		font-size: 2.5rem;
+	}
+
+	.thank-you-content p {
+		font-size: 1.25rem;
+		color: var(--color-text-muted);
+		line-height: 1.6;
+	}
+
+	@media (max-width: 768px) {
+		.thank-you-section {
+			min-height: 60vh;
+			padding: 3rem 1rem;
+		}
+
+		.thank-you-content {
+			padding: 3rem 2rem;
+		}
+
+		.thank-you-content h1 {
+			font-size: 1.75rem;
+		}
+
+		.thank-you-content p {
+			font-size: 1.125rem;
+		}
+	}
+</style>
