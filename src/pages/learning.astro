@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Learning | Boys Middle School" description="Our approach to teaching STEM and humanities at Boys Middle School.">
+	<Header />
+	<main>
+		<article class="learning-page">
+			<div class="container">
+				<h1>Learning</h1>
+
+				<p class="intro">We have a strong philosophy of what we want our students to be academically.</p>
+
+				<section class="learning-section">
+					<h2>STEM</h2>
+
+					<blockquote>
+						"Science is a way of thinking much more than it is a body of knowledge." - Carl Sagan
+					</blockquote>
+
+					<p>We want our students to develop a sense of wonder about science and a desire to understand the world, both natural and man-made.</p>
+
+					<p>We want to do this from trying to solve real problems. Both as exercises in thought, and in actual physical form, when designing or making or fixing physical things.</p>
+
+					<p>If your child comes home with an air-filled balloon and says "I want to show you how SpaceX rockets work" we're doing ok.</p>
+
+					<p><a href="/learning/approach-to-stem">Details</a></p>
+				</section>
+
+				<section class="learning-section">
+					<h2>Humanities</h2>
+
+					<p>For many young students (particularly boys), humanities in most schools is "boring". We believe this is mostly because of how humanities are taught.</p>
+
+					<p>We will inspire the students with material that appeals to them. From great battles in mythology and history (The greek mythologies, Alexander the Great, Napoleon, The American Revolution and others) to current and past debates about the US constitution, and everything in between.</p>
+
+					<p>When students are reading and writing and communicating about things that are interesting to them, they are more receptive to taking on feedback about improvements in their writing and communication skills.</p>
+
+					<p class="tbd">Details</p>
+				</section>
+			</div>
+		</article>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.learning-page {
+		background: var(--color-bg);
+		padding: 3rem 0 5rem;
+	}
+
+	.container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	h1 {
+		color: var(--color-text);
+		margin-bottom: 2rem;
+		font-size: 3rem;
+	}
+
+	.intro {
+		color: var(--color-text);
+		font-size: 1.25rem;
+		line-height: 1.8;
+		margin-bottom: 3rem;
+	}
+
+	.learning-section {
+		margin-bottom: 4rem;
+	}
+
+	.learning-section h2 {
+		color: var(--color-text);
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid var(--color-border);
+	}
+
+	.learning-section h3 {
+		color: var(--color-text);
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.learning-section p {
+		color: var(--color-text-muted);
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+	}
+
+	.learning-section ul {
+		margin-bottom: 2rem;
+		padding-left: 2rem;
+	}
+
+	.learning-section li {
+		color: var(--color-text-muted);
+		margin-bottom: 0.75rem;
+		line-height: 1.7;
+	}
+
+	.learning-section a {
+		color: var(--color-accent);
+		text-decoration: underline;
+	}
+
+	.learning-section a:hover {
+		color: var(--color-accent-hover);
+	}
+
+	blockquote {
+		border-left: 3px solid var(--color-accent);
+		padding-left: 1.5rem;
+		margin: 2rem 0;
+		font-style: italic;
+		color: var(--color-text);
+	}
+
+	.tbd {
+		color: var(--color-text-muted);
+		font-style: italic;
+	}
+
+	@media (max-width: 768px) {
+		.learning-page {
+			padding: 2rem 0 3rem;
+		}
+
+		.container {
+			padding: 0 1.5rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.learning-section h2 {
+			font-size: 1.5rem;
+		}
+
+		.learning-section h3 {
+			font-size: 1.25rem;
+		}
+	}
+</style>
