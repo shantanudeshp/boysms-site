@@ -1,0 +1,156 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="Approach to Teaching STEM | Boys Middle School" description="Our philosophy and methodology for teaching science, technology, engineering, and mathematics.">
+	<Header />
+	<main>
+		<article class="learning-subpage">
+			<div class="container">
+				<a href="/learning" class="back-link">← Back to Learning</a>
+				<h1>Approach to teaching STEM</h1>
+
+				<div class="content">
+					<ul>
+						<li>Start with an interesting "real life" problem that the kids will be excited to tackle.
+							<ul>
+								<li>This is before introducing the particular science or math topic.</li>
+							</ul>
+						</li>
+						<li>Let the kids wrestle with the problem, and try their own "untrained" way to solve it.</li>
+						<li>Discuss the approaches, iterate.</li>
+						<li>Then introduce the concepts, and re-solve the problem using the concepts if required.</li>
+						<li>(For math) Assign the concept on a learning platform, do practice, and test for mastery.</li>
+						<li>(For math) Do practice tests, both on the learning platform and live with pencil and paper, to ensure mastery.</li>
+						<li>(For math) Impromptu retests on topics (via practical questions) at later times, to confirm mastery.</li>
+					</ul>
+
+					<h2>Science</h2>
+
+					<p>Here is an example of what we will use in our curriculum: <a href="https://www.quantumcamp.com/" target="_blank" rel="noopener noreferrer">https://www.quantumcamp.com/</a></p>
+
+					<p>There is a complete physics and chemistry course, all motivated by exploring the subject matter like it was explored by scientists who made key discoveries.</p>
+
+					<p>This style of experimentation and exploration based curriculum is also followed by institutes like Stanford Online High School.</p>
+
+					<h2>Math</h2>
+
+					<p>We strongly believe mastering math at basic Calculus level by end of high school is essential for all students.</p>
+
+					<p>Our core syllabus ensures all students are ready for Geometry 1 in High School, which puts them on track for a basic or advanced calculus course by senior year of high school.</p>
+
+					<p>However, more advanced students will be enthusiastically supported by the teaching staff. If a student shows mastery over all the core syllabus (via online assessments and a live pencil/paper test), we will put them in cohorts that can proceed to more advanced material.</p>
+
+					<p><a href="/learning/approach-to-stem/math-core-knowledge">Math syllabus for middle school</a></p>
+
+					<p><a href="/learning/approach-to-stem/questions-to-motivate-math">Examples of how we motivate math skills with interesting problems / questions</a></p>
+
+				</div>
+			</div>
+		</article>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.learning-subpage {
+		background: var(--color-bg);
+		padding: 3rem 0 5rem;
+	}
+
+	.container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	.back-link {
+		display: inline-block;
+		color: var(--color-text-muted);
+		font-size: 0.95rem;
+		margin-bottom: 2rem;
+		transition: color 0.3s ease;
+	}
+
+	.back-link:hover {
+		color: var(--color-accent);
+	}
+
+	h1 {
+		color: var(--color-text);
+		margin-bottom: 2rem;
+		font-size: 2.5rem;
+	}
+
+	.content ul {
+		margin-bottom: 2.5rem;
+		padding-left: 2rem;
+	}
+
+	.content ul ul {
+		margin-top: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.content li {
+		color: var(--color-text-muted);
+		margin-bottom: 0.75rem;
+		line-height: 1.7;
+	}
+
+	.content h2 {
+		color: var(--color-text);
+		margin-top: 3rem;
+		margin-bottom: 1.5rem;
+		font-size: 1.75rem;
+	}
+
+	.content p {
+		color: var(--color-text-muted);
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+	}
+
+	.content a {
+		color: var(--color-accent);
+		text-decoration: underline;
+	}
+
+	.content a:hover {
+		color: var(--color-accent-hover);
+	}
+
+	.content blockquote {
+		border-left: 3px solid var(--color-accent);
+		padding-left: 1.5rem;
+		margin: 2rem 0;
+		font-style: italic;
+		color: var(--color-text);
+		font-size: 1.125rem;
+	}
+
+	@media (max-width: 768px) {
+		.learning-subpage {
+			padding: 2rem 0 3rem;
+		}
+
+		.container {
+			padding: 0 1.5rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		.content h2 {
+			font-size: 1.5rem;
+			margin-top: 2rem;
+		}
+
+		.content blockquote {
+			font-size: 1rem;
+		}
+	}
+</style>
