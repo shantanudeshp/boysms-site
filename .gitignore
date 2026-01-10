@@ -25,3 +25,5 @@ pnpm-debug.log*
 awscli-bundle/
 awscli-bundle.zip
 
+# My local development files
+dev-content/
