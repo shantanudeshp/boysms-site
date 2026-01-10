@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Why a Boys School | Boys Middle School" description="Understanding why some boys need a different school environment to thrive.">
+	<Header />
+	<main>
+		<article class="page">
+			<div class="container">
+				<h1>Why a Boys School</h1>
+
+				<section class="content-section">
+					<h2>Schools Are Not Working for Some Boys</h2>
+					<p>A growing body of research shows that boys begin to underperform girls across many academic and behavioral measures starting around early adolescence (≈ age 10). These patterns often persist into adulthood.</p>
+					<p>We believe school environments are a major contributing factor. Many classrooms are not designed to meet the developmental needs of a large subset of boys — particularly during the middle school years.</p>
+				</section>
+
+				<section class="content-section">
+					<h2>The "Girls in STEM" Effect — Applied to Boys</h2>
+					<p>As a society, we correctly focus on creating environments where girls can thrive, especially in historically male-dominated fields like STEM.</p>
+					<p>But there is a parallel issue that often goes unaddressed:</p>
+					<ul>
+						<li>In most K–8 schools, 80% or more of teachers are female (vs 50% in boys schools)</li>
+						<li>Combined with co-ed dynamics, this can create learning environments that do not fully engage or motivate some boys</li>
+					</ul>
+					<p>As children enter adolescence, both boys and girls benefit from environments that align with their intrinsic motivations. For some students, that environment is best provided by a single-sex school.</p>
+
+					<blockquote>
+						"Boys' schools embrace the intellectual, physical, social, and emotional lives of boys and appreciate the intensity and complexity of boyhood."
+						<cite>— International Boys' School Coalition</cite>
+					</blockquote>
+				</section>
+
+				<div class="cta-links">
+					<p>Learn more about:</p>
+					<ul>
+						<li><a href="/learning">Learning</a></li>
+						<li><a href="/family-driven-personalization">Family-Driven Personalization</a></li>
+						<li><a href="/school-environment">School Environment</a></li>
+					</ul>
+				</div>
+			</div>
+		</article>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page {
+		background: var(--color-bg);
+		padding: 3rem 0 5rem;
+	}
+
+	.container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	h1 {
+		color: var(--color-text);
+		margin-bottom: 3rem;
+		font-size: 3rem;
+	}
+
+	.content-section {
+		margin-bottom: 3rem;
+	}
+
+	.content-section h2 {
+		color: var(--color-text);
+		margin-bottom: 1.5rem;
+		font-size: 1.75rem;
+	}
+
+	.content-section p {
+		color: var(--color-text-muted);
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+	}
+
+	.content-section ul {
+		margin: 1.5rem 0;
+		padding-left: 2rem;
+	}
+
+	.content-section li {
+		color: var(--color-text-muted);
+		margin-bottom: 0.75rem;
+		line-height: 1.7;
+	}
+
+	blockquote {
+		border-left: 3px solid var(--color-accent);
+		padding: 1.5rem;
+		margin: 2rem 0;
+		background: var(--color-bg-elevated);
+		font-style: italic;
+		color: var(--color-text);
+	}
+
+	blockquote cite {
+		display: block;
+		margin-top: 1rem;
+		font-style: normal;
+		font-weight: 600;
+		color: var(--color-accent);
+	}
+
+	.cta-links {
+		margin-top: 4rem;
+		padding: 2rem;
+		background: var(--color-bg-elevated);
+		border-radius: 12px;
+		border: 1px solid var(--color-border);
+	}
+
+	.cta-links p {
+		color: var(--color-text);
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	.cta-links ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.cta-links li {
+		margin-bottom: 0.5rem;
+	}
+
+	.cta-links a {
+		color: var(--color-accent);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.cta-links a:hover {
+		color: var(--color-accent-hover);
+		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		.page {
+			padding: 2rem 0 3rem;
+		}
+
+		.container {
+			padding: 0 1.5rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.content-section h2 {
+			font-size: 1.5rem;
+		}
+	}
+</style>
+

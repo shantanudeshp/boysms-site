@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="School Environment | Boys Middle School" description="What to expect from the BMS school environment.">
+	<Header />
+	<main>
+		<article class="page">
+			<div class="container">
+				<h1>School Environment</h1>
+
+				<div class="environment-grid">
+					<section class="environment-card">
+						<h2>No Smartphones</h2>
+						<p>Phones are checked in for the entire day.</p>
+						<p>Students remain present mentally, physically, and socially.</p>
+					</section>
+
+					<section class="environment-card">
+						<h2>Tech Boundaries</h2>
+						<p>All student tech activity is monitored and restricted.</p>
+						<p>Technology serves goals—not entertainment.</p>
+						<p>AI tools are used intentionally to support learning.</p>
+					</section>
+
+					<section class="environment-card">
+						<h2>Physical Space</h2>
+						<ul>
+							<li>Open-plan main area with activity zones</li>
+							<li>Dedicated classrooms and maker labs</li>
+							<li>Outdoor play space with sports equipment</li>
+						</ul>
+						<p class="emphasis">A culture of movement, collaboration, and exploration.</p>
+					</section>
+
+					<section class="environment-card">
+						<h2>Parent Participation</h2>
+						<p>Parents are warmly welcome (but not expected) to contribute.</p>
+						<p>Opportunities to give guest talks, assist with projects, drop in for afternoon sessions.</p>
+					</section>
+				</div>
+
+				<div class="cta-links">
+					<p>Learn more about:</p>
+					<ul>
+						<li><a href="/why-a-boys-school">Why a Boys School</a></li>
+						<li><a href="/learning">Learning</a></li>
+						<li><a href="/family-driven-personalization">Family-Driven Personalization</a></li>
+					</ul>
+				</div>
+			</div>
+		</article>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page {
+		background: var(--color-bg);
+		padding: 3rem 0 5rem;
+	}
+
+	.container {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	h1 {
+		color: var(--color-text);
+		margin-bottom: 3rem;
+		font-size: 3rem;
+	}
+
+	.environment-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.environment-card {
+		background: var(--color-bg-elevated);
+		padding: 2.5rem;
+		border-radius: 12px;
+		border: 1px solid var(--color-border);
+		transition: all 0.3s ease;
+	}
+
+	.environment-card:hover {
+		transform: translateY(-4px);
+		border-color: var(--color-accent);
+	}
+
+	.environment-card h2 {
+		color: var(--color-text);
+		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+	}
+
+	.environment-card p {
+		color: var(--color-text-muted);
+		line-height: 1.7;
+		margin-bottom: 0.75rem;
+	}
+
+	.environment-card p:last-child {
+		margin-bottom: 0;
+	}
+
+	.environment-card ul {
+		padding-left: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.environment-card li {
+		color: var(--color-text-muted);
+		margin-bottom: 0.5rem;
+		line-height: 1.7;
+	}
+
+	.environment-card .emphasis {
+		color: var(--color-text);
+		font-weight: 500;
+		margin-top: 1rem;
+	}
+
+	.cta-links {
+		margin-top: 4rem;
+		padding: 2rem;
+		background: var(--color-bg-elevated);
+		border-radius: 12px;
+		border: 1px solid var(--color-border);
+		max-width: 900px;
+	}
+
+	.cta-links p {
+		color: var(--color-text);
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	.cta-links ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.cta-links li {
+		margin-bottom: 0.5rem;
+	}
+
+	.cta-links a {
+		color: var(--color-accent);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.cta-links a:hover {
+		color: var(--color-accent-hover);
+		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		.page {
+			padding: 2rem 0 3rem;
+		}
+
+		.container {
+			padding: 0 1.5rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.environment-grid {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+
+		.environment-card {
+			padding: 2rem;
+		}
+
+		.environment-card h2 {
+			font-size: 1.25rem;
+		}
+	}
+</style>
+

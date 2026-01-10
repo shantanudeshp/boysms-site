@@ -1,0 +1,212 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Family-Driven Personalization | Boys Middle School" description="How BMS gives families flexibility in their child's education.">
+	<Header />
+	<main>
+		<article class="page">
+			<div class="container">
+				<h1>Family-Driven Personalization</h1>
+
+				<p class="intro">Core middle-school academics can be completed in roughly 15 hours of focused work per week.</p>
+
+				<section class="content-section">
+					<h2>At BMS:</h2>
+					<ul>
+						<li>Students who need more time get it</li>
+						<li>Students who are on track gain flexibility</li>
+					</ul>
+
+					<p>Instead of filling the day with science facts and arts and craft projects, families can choose how some time is used:</p>
+
+					<ul class="options-list">
+						<li>Advanced academics or tutoring in subjects of interest</li>
+						<li>Music practice or language learning</li>
+						<li>Woodworking, maker lab, arts & crafts</li>
+						<li>Reading, chess, board games</li>
+						<li>Outdoor play and peer connection</li>
+						<li>Teacher-guided passion projects</li>
+					</ul>
+				</section>
+
+				<section class="schedule-section">
+					<div class="schedule">
+						<div class="schedule-item">
+							<h3>Mornings:</h3>
+							<p>Focused core academics</p>
+						</div>
+						<div class="schedule-item">
+							<h3>Afternoons:</h3>
+							<p>Flexible, personalized time</p>
+						</div>
+						<div class="schedule-item outcome">
+							<h3>Outcome:</h3>
+							<p>Your child gets their evenings and family time back.</p>
+						</div>
+					</div>
+				</section>
+
+				<div class="cta-links">
+					<p>Learn more about:</p>
+					<ul>
+						<li><a href="/why-a-boys-school">Why a Boys School</a></li>
+						<li><a href="/learning">Learning</a></li>
+						<li><a href="/school-environment">School Environment</a></li>
+					</ul>
+				</div>
+			</div>
+		</article>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	.page {
+		background: var(--color-bg);
+		padding: 3rem 0 5rem;
+	}
+
+	.container {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	h1 {
+		color: var(--color-text);
+		margin-bottom: 2rem;
+		font-size: 3rem;
+	}
+
+	.intro {
+		color: var(--color-text);
+		font-size: 1.25rem;
+		line-height: 1.8;
+		margin-bottom: 3rem;
+	}
+
+	.content-section {
+		margin-bottom: 3rem;
+	}
+
+	.content-section h2 {
+		color: var(--color-text);
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.content-section p {
+		color: var(--color-text-muted);
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.content-section ul {
+		margin: 1rem 0;
+		padding-left: 2rem;
+	}
+
+	.content-section li {
+		color: var(--color-text-muted);
+		margin-bottom: 0.75rem;
+		line-height: 1.7;
+	}
+
+	.options-list {
+		margin-top: 1rem;
+	}
+
+	.schedule-section {
+		margin-bottom: 3rem;
+	}
+
+	.schedule {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+		padding: 2rem;
+		background: var(--color-bg-elevated);
+		border-radius: 12px;
+		border: 1px solid var(--color-border);
+	}
+
+	.schedule-item h3 {
+		color: var(--color-accent);
+		margin-bottom: 0.5rem;
+		font-size: 1.25rem;
+		font-weight: 600;
+	}
+
+	.schedule-item p {
+		color: var(--color-text-muted);
+		margin: 0;
+		line-height: 1.6;
+	}
+
+	.schedule-item.outcome p {
+		color: var(--color-text);
+		font-weight: 500;
+	}
+
+	.cta-links {
+		margin-top: 4rem;
+		padding: 2rem;
+		background: var(--color-bg-elevated);
+		border-radius: 12px;
+		border: 1px solid var(--color-border);
+	}
+
+	.cta-links p {
+		color: var(--color-text);
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	.cta-links ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.cta-links li {
+		margin-bottom: 0.5rem;
+	}
+
+	.cta-links a {
+		color: var(--color-accent);
+		text-decoration: none;
+		transition: color 0.3s ease;
+	}
+
+	.cta-links a:hover {
+		color: var(--color-accent-hover);
+		text-decoration: underline;
+	}
+
+	@media (max-width: 768px) {
+		.page {
+			padding: 2rem 0 3rem;
+		}
+
+		.container {
+			padding: 0 1.5rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		.intro {
+			font-size: 1.125rem;
+		}
+
+		.schedule {
+			grid-template-columns: 1fr;
+			padding: 1.5rem;
+		}
+	}
+</style>
+
