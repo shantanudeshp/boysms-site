@@ -35,6 +35,48 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
+		<section class="visual-section visual-section-learning">
+			<div class="container">
+				<div class="visual-content">
+					<div class="visual-image">
+						<img src="/hands-on-learning.jpeg" alt="Boys engaged in hands-on STEM learning" />
+					</div>
+					<div class="visual-text">
+						<h2>Hands-On, Problem-Driven Learning</h2>
+						<p>Our curriculum emphasizes active learning through real-world challenges. Boys don't just read about science—they design experiments, build solutions, and test their ideas. This approach channels their natural energy and curiosity into deep understanding and genuine mastery.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="visual-section visual-section-discussion">
+			<div class="container">
+				<div class="visual-content reverse">
+					<div class="visual-image">
+						<img src="/discussion-seminar.jpeg" alt="Boys in engaged discussion" />
+					</div>
+					<div class="visual-text">
+						<h2>Discussion-Centered Humanities</h2>
+						<p>Through Socratic seminars and thoughtful debate, boys learn to articulate ideas, challenge assumptions, and engage with complex texts. Our discussion-based approach builds confidence in expressing thoughts and develops critical thinking skills essential for leadership.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="visual-section visual-section-achievement">
+			<div class="container">
+				<div class="visual-content">
+					<div class="visual-image">
+						<img src="/achievement.jpeg" alt="Boys celebrating achievement" />
+					</div>
+					<div class="visual-text">
+						<h2>Earned Achievement & Character</h2>
+						<p>We channel boys' natural competitiveness into meaningful growth. Through challenging work, clear standards, and genuine accomplishment, boys develop the character and confidence that comes from earning their success—not receiving it.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<section class="learn-more">
 			<div class="container">
 				<h2>Learn more about:</h2>
@@ -114,7 +156,7 @@ import Footer from '../components/Footer.astro';
 	}
 
 	:global(html.light) .hero-overlay {
-		background: linear-gradient(135deg, rgba(253, 246, 227, 0.75) 0%, rgba(238, 232, 213, 0.85) 100%);
+		background: linear-gradient(135deg, rgba(26, 54, 93, 0.5) 0%, rgba(26, 54, 93, 0.7) 100%);
 	}
 
 	.hero-content {
@@ -199,6 +241,57 @@ import Footer from '../components/Footer.astro';
 
 	.intro-text:last-child {
 		margin-bottom: 0;
+	}
+
+	.visual-section {
+		padding: 5rem 0;
+		background: var(--color-bg);
+	}
+
+	.visual-section:nth-child(even) {
+		background: var(--color-bg-light);
+	}
+
+	.visual-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		align-items: center;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.visual-content.reverse {
+		direction: rtl;
+	}
+
+	.visual-content.reverse > * {
+		direction: ltr;
+	}
+
+	.visual-image {
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+	}
+
+	.visual-image img {
+		width: 100%;
+		height: 400px;
+		object-fit: cover;
+		display: block;
+	}
+
+	.visual-text h2 {
+		color: var(--color-text);
+		margin-bottom: 1.5rem;
+		font-size: 2rem;
+	}
+
+	.visual-text p {
+		color: var(--color-text-muted);
+		font-size: 1.125rem;
+		line-height: 1.8;
 	}
 
 	.learn-more {
@@ -357,6 +450,31 @@ import Footer from '../components/Footer.astro';
 		}
 
 		.intro-text {
+			font-size: 1rem;
+		}
+
+		.visual-section {
+			padding: 3rem 0;
+		}
+
+		.visual-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		.visual-content.reverse {
+			direction: ltr;
+		}
+
+		.visual-image img {
+			height: 300px;
+		}
+
+		.visual-text h2 {
+			font-size: 1.75rem;
+		}
+
+		.visual-text p {
 			font-size: 1rem;
 		}
 
