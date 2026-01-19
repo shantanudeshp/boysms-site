@@ -12,7 +12,16 @@ import Footer from '../components/Footer.astro';
 			<div class="hero-content">
 				<h1>Boys Middle School</h1>
 				<p class="hero-subtitle">A unique middle school (grade 5–8) program for boys</p>
-				<p class="hero-location">SF Bay Area</p>
+				<p class="hero-location">Menlo Park, SF Bay Area</p>
+			</div>
+		</section>
+
+		<section class="mission">
+			<div class="container">
+				<h2>Our Mission</h2>
+				<div class="mission-content">
+					<p class="mission-text">Our mission is to help boys grow into confident young men by building a school they're excited to attend—one that channels their energy, curiosity, and competitiveness into mastery, character, and earned achievement.</p>
+				</div>
 			</div>
 		</section>
 
@@ -20,7 +29,7 @@ import Footer from '../components/Footer.astro';
 			<div class="container">
 				<div class="intro-content">
 					<p class="intro-text">The Boys Middle School (BMS) is a proposed 5th–8th grade boys' school in the San Francisco Bay Area.</p>
-					<p class="intro-text">We believe that some boys are not well served by existing coeducational public and private schools. Our mission is to build a school that deliberately embraces boys' natural instincts—channeling their energy, curiosity, and competitiveness into deep learning, mastery, and confidence through achievement.</p>
+					<p class="intro-text">We believe that some boys are not well served by existing coeducational public and private schools.</p>
 					<p class="intro-text">Our school provides a liberal arts foundation with mastery-based learning, problem-driven STEM, and discussion-centered humanities—uniting academic rigor with a shared commitment to intellectual and civic life.</p>
 				</div>
 			</div>
@@ -87,9 +96,9 @@ import Footer from '../components/Footer.astro';
 		background-size: cover;
 		background-position: center;
 		color: white;
-		padding: 8rem 2rem;
+		padding: 5rem 2rem;
 		text-align: center;
-		min-height: 500px;
+		min-height: 400px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -142,6 +151,32 @@ import Footer from '../components/Footer.astro';
 	.hero-location {
 		font-size: 1.25rem;
 		opacity: 0.9;
+	}
+
+	.mission {
+		padding: 3.5rem 0;
+		background: var(--color-bg-elevated);
+		border-bottom: 1px solid var(--color-border);
+	}
+
+	.mission h2 {
+		text-align: center;
+		color: var(--color-text);
+		margin-bottom: 2rem;
+		font-size: 2rem;
+	}
+
+	.mission-content {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.mission-text {
+		font-size: 1.25rem;
+		line-height: 1.8;
+		color: var(--color-text);
+		text-align: center;
+		font-weight: 500;
 	}
 
 	.intro {
@@ -288,8 +323,8 @@ import Footer from '../components/Footer.astro';
 
 	@media (max-width: 768px) {
 		.hero {
-			padding: 5rem 1.5rem;
-			min-height: 400px;
+			padding: 4rem 1.5rem;
+			min-height: 350px;
 		}
 
 		.hero h1 {
@@ -301,6 +336,19 @@ import Footer from '../components/Footer.astro';
 		}
 
 		.hero-location {
+			font-size: 1.125rem;
+		}
+
+		.mission {
+			padding: 2.5rem 0;
+		}
+
+		.mission h2 {
+			font-size: 1.75rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.mission-text {
 			font-size: 1.125rem;
 		}
 
