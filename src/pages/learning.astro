@@ -7,10 +7,15 @@ import Footer from '../components/Footer.astro';
 <Layout title="Learning | Boys Middle School" description="Our approach to mastery-based learning in STEM and humanities at Boys Middle School.">
 	<Header />
 	<main>
+		<section class="page-hero">
+			<div class="hero-overlay"></div>
+			<div class="hero-content">
+				<h1>Learning</h1>
+			</div>
+		</section>
+
 		<article class="learning-page">
 			<div class="container">
-				<h1>Learning</h1>
-
 				<p class="intro">Our school provides a liberal arts foundation with mastery-based learning, problem-driven STEM, and discussion-centered humanities—uniting academic rigor with a shared commitment to intellectual and civic life.</p>
 
 				<nav class="section-nav">
@@ -111,6 +116,52 @@ import Footer from '../components/Footer.astro';
 </Layout>
 
 <style>
+	.page-hero {
+		position: relative;
+		background-image: url('/homepage-learning.jpeg');
+		background-size: cover;
+		background-position: center;
+		color: white;
+		padding: 4rem 2rem;
+		text-align: center;
+		min-height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(135deg, rgba(10, 10, 11, 0.7) 0%, rgba(19, 19, 20, 0.85) 100%);
+	}
+
+	:global(html.light) .hero-overlay {
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(26, 54, 93, 0.35) 100%);
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.page-hero h1 {
+		color: white;
+		font-size: 3rem;
+		margin-bottom: 0;
+		line-height: 1.2;
+		font-weight: 700;
+	}
+
+	:global(html.light) .page-hero h1 {
+		color: var(--color-primary);
+	}
+
 	.learning-page {
 		background: var(--color-bg);
 		padding: 3rem 0 5rem;
@@ -120,12 +171,6 @@ import Footer from '../components/Footer.astro';
 		max-width: 900px;
 		margin: 0 auto;
 		padding: 0 2rem;
-	}
-
-	h1 {
-		color: var(--color-text);
-		margin-bottom: 2rem;
-		font-size: 3rem;
 	}
 
 	.intro {
@@ -254,17 +299,21 @@ import Footer from '../components/Footer.astro';
 	}
 
 	@media (max-width: 768px) {
+		.page-hero {
+			padding: 3rem 1.5rem;
+			min-height: 250px;
+		}
+
+		.page-hero h1 {
+			font-size: 2rem;
+		}
+
 		.learning-page {
 			padding: 2rem 0 3rem;
 		}
 
 		.container {
 			padding: 0 1.5rem;
-		}
-
-		h1 {
-			font-size: 2rem;
-			margin-bottom: 2rem;
 		}
 
 		.section-nav {

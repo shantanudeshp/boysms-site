@@ -35,72 +35,62 @@ import Footer from '../components/Footer.astro';
 			</div>
 		</section>
 
-		<section class="visual-section visual-section-learning">
+		<section class="visual-section visual-section-why">
 			<div class="container">
 				<div class="visual-content">
 					<div class="visual-image">
-						<img src="/hands-on-learning.jpeg" alt="Boys engaged in hands-on STEM learning" />
+						<img src="/homepage-why-a-boys-school.jpeg" alt="Why a Boys School" />
 					</div>
 					<div class="visual-text">
-						<h2>Hands-On, Problem-Driven Learning</h2>
-						<p>Our curriculum emphasizes active learning through real-world challenges. Boys don't just read about science—they design experiments, build solutions, and test their ideas. This approach channels their natural energy and curiosity into deep understanding and genuine mastery.</p>
+						<h2>Why a Boys School</h2>
+						<p>Understanding why some boys need a different school environment to thrive.</p>
+						<a href="/why-a-boys-school" class="btn btn-secondary">Learn More →</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="visual-section visual-section-discussion">
+		<section class="visual-section visual-section-learning">
 			<div class="container">
 				<div class="visual-content reverse">
 					<div class="visual-image">
-						<img src="/discussion-seminar.jpeg" alt="Boys in engaged discussion" />
+						<img src="/homepage-learning.jpeg" alt="Learning" />
 					</div>
 					<div class="visual-text">
-						<h2>Discussion-Centered Humanities</h2>
-						<p>Through Socratic seminars and thoughtful debate, boys learn to articulate ideas, challenge assumptions, and engage with complex texts. Our discussion-based approach builds confidence in expressing thoughts and develops critical thinking skills essential for leadership.</p>
+						<h2>Learning</h2>
+						<p>Mastery-based learning, problem-driven STEM, and discussion-centered humanities.</p>
+						<a href="/learning" class="btn btn-secondary">Learn More →</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="visual-section visual-section-achievement">
+		<section class="visual-section visual-section-personalization">
 			<div class="container">
 				<div class="visual-content">
 					<div class="visual-image">
-						<img src="/achievement.jpeg" alt="Boys celebrating achievement" />
+						<img src="/homepage-family-time.jpeg" alt="Family-Driven Personalization" />
 					</div>
 					<div class="visual-text">
-						<h2>Earned Achievement & Character</h2>
-						<p>We channel boys' natural competitiveness into meaningful growth. Through challenging work, clear standards, and genuine accomplishment, boys develop the character and confidence that comes from earning their success—not receiving it.</p>
+						<h2>Family-Driven Personalization</h2>
+						<p>How we give families flexibility in their child's education.</p>
+						<a href="/family-driven-personalization" class="btn btn-secondary">Learn More →</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="learn-more">
+		<section class="visual-section visual-section-environment">
 			<div class="container">
-				<h2>Learn more about:</h2>
-				<div class="links-grid">
-					<a href="/why-a-boys-school" class="link-card">
-						<h3>Why a Boys School</h3>
-						<p>Understanding why some boys need a different school environment to thrive.</p>
-						<span class="arrow">→</span>
-					</a>
-					<a href="/learning" class="link-card">
-						<h3>Learning</h3>
-						<p>Mastery-based learning, problem-driven STEM, and discussion-centered humanities.</p>
-						<span class="arrow">→</span>
-					</a>
-					<a href="/family-driven-personalization" class="link-card">
-						<h3>Family-Driven Personalization</h3>
-						<p>How we give families flexibility in their child's education.</p>
-						<span class="arrow">→</span>
-					</a>
-					<a href="/school-environment" class="link-card">
-						<h3>School Environment</h3>
+				<div class="visual-content reverse">
+					<div class="visual-image">
+						<img src="/homepage-environment.avif" alt="School Environment" />
+					</div>
+					<div class="visual-text">
+						<h2>School Environment</h2>
 						<p>What to expect from phones, tech, physical space, and parent involvement.</p>
-						<span class="arrow">→</span>
-					</a>
+						<a href="/school-environment" class="btn btn-secondary">Learn More →</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -156,7 +146,7 @@ import Footer from '../components/Footer.astro';
 	}
 
 	:global(html.light) .hero-overlay {
-		background: linear-gradient(135deg, rgba(26, 54, 93, 0.5) 0%, rgba(26, 54, 93, 0.7) 100%);
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(26, 54, 93, 0.25) 100%);
 	}
 
 	.hero-content {
@@ -292,62 +282,7 @@ import Footer from '../components/Footer.astro';
 		color: var(--color-text-muted);
 		font-size: 1.125rem;
 		line-height: 1.8;
-	}
-
-	.learn-more {
-		padding: 4rem 0;
-		background: var(--color-bg-light);
-	}
-
-	.learn-more h2 {
-		text-align: center;
-		margin-bottom: 3rem;
-		color: var(--color-text);
-	}
-
-	.links-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 2rem;
-	}
-
-	.link-card {
-		background: var(--color-bg-elevated);
-		border: 1px solid var(--color-border);
-		border-radius: 12px;
-		padding: 2rem;
-		text-decoration: none;
-		transition: all 0.3s ease;
-		position: relative;
-	}
-
-	.link-card:hover {
-		border-color: var(--color-accent);
-		transform: translateY(-4px);
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-	}
-
-	.link-card h3 {
-		color: var(--color-text);
-		margin-bottom: 0.75rem;
-		font-size: 1.5rem;
-	}
-
-	.link-card p {
-		color: var(--color-text-muted);
-		line-height: 1.6;
-		margin-bottom: 1rem;
-	}
-
-	.link-card .arrow {
-		color: var(--color-accent);
-		font-size: 1.25rem;
-		font-weight: 600;
-		transition: transform 0.3s ease;
-	}
-
-	.link-card:hover .arrow {
-		transform: translateX(4px);
+		margin-bottom: 1.5rem;
 	}
 
 	.btn {
@@ -373,6 +308,18 @@ import Footer from '../components/Footer.astro';
 		border-color: var(--color-accent-hover);
 		transform: translateY(-2px);
 		box-shadow: 0 8px 20px rgba(217, 119, 87, 0.25);
+	}
+
+	.btn-secondary {
+		background: transparent;
+		color: var(--color-accent);
+		border-color: var(--color-accent);
+	}
+
+	.btn-secondary:hover {
+		background: var(--color-accent);
+		color: var(--color-text-dark);
+		transform: translateY(-2px);
 	}
 
 	.btn-large {
@@ -476,23 +423,6 @@ import Footer from '../components/Footer.astro';
 
 		.visual-text p {
 			font-size: 1rem;
-		}
-
-		.learn-more {
-			padding: 3rem 0;
-		}
-
-		.links-grid {
-			grid-template-columns: 1fr;
-			gap: 1.5rem;
-		}
-
-		.link-card {
-			padding: 1.5rem;
-		}
-
-		.link-card h3 {
-			font-size: 1.25rem;
 		}
 
 		.cta-section {
